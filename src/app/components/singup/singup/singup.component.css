@@ -1,7 +1,7 @@
 .img-container {
     margin: auto;
-    width: 245px;
-    height: 280px;
+    max-width: 245px;
+    max-height: 280px;
 }
 
 .img-container>img {
@@ -24,7 +24,7 @@ form>input {
     border-radius: 38px;
     width: 80%;
     height: 35px;
-    font-size: 19px;
+    font-size: 17px;
     font-weight: bold;
     padding-left: 20px;
     margin: auto;

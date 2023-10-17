@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductsListComponent } from './components/productsList/products-list/products-list.component';
 import { HomeComponent } from './views/home/home/home.component';
 import { AuthComponent } from './views/auth/auth/auth.component';
+import { ProductsMenuComponent } from './views/products-menu/products-menu/products-menu.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'menu', component: ProductsListComponent},
+  {path: 'menu', component: ProductsMenuComponent},
   {path: 'login', component: AuthComponent}
 ]
 
