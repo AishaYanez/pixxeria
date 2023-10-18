@@ -1,0 +1,25 @@
+.search-bar {
+  background-color: #DFDFDF;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.search-resourses > input {
+  border: none;
+  background-color: #DFDFDF;
+  border-bottom: 1px solid black;
+  display: none;
+}
+
+.icon-check-container {
+  display: none;
+}
+
+.search-bar:focus {
+  width: 25vw;
+}

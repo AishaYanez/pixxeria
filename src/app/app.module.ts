@@ -12,6 +12,9 @@ import { HomeComponent } from './views/home/home/home.component';
 import { AuthComponent } from './views/auth/auth/auth.component';
 import { LoginComponent } from './components/login/login/login.component';
 import { SingupComponent } from './components/singup/singup/singup.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { ContactComponent } from './views/contact/contact.component';
+import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { SingupComponent } from './components/singup/singup/singup.component';
     HomeComponent,
     AuthComponent,
     LoginComponent,
-    SingupComponent
+    SingupComponent,
+    SearchBarComponent,
+    ContactComponent,
+    NavMenuComponent
   ],
   imports: [
     FormsModule,
