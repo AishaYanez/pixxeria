@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Food } from 'src/app/models/food/food';
+import { FoodService } from 'src/app/services/food/food.service';
 
 @Component({
   selector: 'app-products-list',
@@ -7,49 +8,46 @@ import { Food } from 'src/app/models/food/food';
   styleUrls: ['./products-list.component.css']
 })
 export class ProductsListComponent {
-  foods: Array<Food> = [];
+  starters: Array<Food> = [];
+  mainCourses: Array<Food> = [];
+  desserts: Array<Food> = [];
   menuSelected!: string;
 
+  constructor(private foodService:FoodService){}
+
   ngOnInit(): void {
-    const food: Food = {
-      id:1,
-      type:"pizza",
-      ingredients:"Ajo y queso",
-      price:17.5
-    };
-    console.log('hola')
-    this.foods.push(food);
-    this.foods.forEach((f)=>console.log(f));
-  }
-
-  //Conseguir las comidas
-  getMainCourse() {
-
-  }
-
-  getStarters() {
-
+    this.menuSelected = localStorage.getItem('menu') || 'main-course';
+    console.log(this.menuSelected);
+    this.loadFoods(); 
   }
 
   getDesserts() {
-
+    this.menuSelected = 'desserts';
+    localStorage.setItem('menu','desserts');
+    this.loadFoods();
   }
 
-  //Cambiar de seccion del menu
-  toStarters() {
-
+  getMainCourse() {
+    this.menuSelected = 'main-course';
+    localStorage.setItem('menu','main-course');
+    this.loadFoods();
   }
 
-  toMainCourse() {
-
+  getStarters() {
+    this.menuSelected = 'starters';
+    localStorage.setItem('menu','starters');
+    this.loadFoods();
   }
 
-  toDesserts() {
-
-  }
-
-  //Selecionar comida para añadir al pedido
-  selectFood() {
-
+  loadFoods() {
+    this.foodService.getFoodByType(this.menuSelected).subscribe(data => {
+      if (this.menuSelected === 'starters') {
+        this.starters = data;
+      } else if (this.menuSelected === 'main-course') {
+        this.mainCourses = data;
+      } else if (this.menuSelected === 'desserts') {
+        this.desserts = data;
+      }
+    });
   }
 }

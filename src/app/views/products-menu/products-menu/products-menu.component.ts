@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./products-menu.component.css']
 })
 export class ProductsMenuComponent {
+  statusLogin!: boolean;
 
+  ngOnInit() {
+    this.statusLogin = JSON.parse(localStorage.getItem('loginStatus') || 'false');
+  }
 }

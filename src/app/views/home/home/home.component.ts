@@ -14,4 +14,18 @@ export class HomeComponent {
   prevSlide() {
     this.currentIndex = (this.currentIndex - 1 + 3) % 3;
   }
+  
+  selectStarter(){
+    localStorage.setItem('menu','starters');
+  }
+
+  selectMain(){
+    localStorage.setItem('menu','main-course');
+    console.log(localStorage.getItem('menu'));
+    
+  }
+
+  selectDessert(){
+    localStorage.setItem('menu','desserts');
+  }
 }

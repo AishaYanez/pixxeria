@@ -2,17 +2,17 @@
   <div class="slider">
     <div *ngIf="currentIndex===0" class="slide starter">
       <div>
-        <button routerLink="menu">Entrantes</button>
+        <button (click)="selectStarter()" routerLink="menu">Entrantes</button>
       </div>
     </div>
     <div *ngIf="currentIndex===1" class="slide main">
       <div>
-        <button routerLink="menu">Comidas</button>
+        <button (click)="selectMain()" routerLink="menu">Comidas</button>
       </div>
     </div>
     <div *ngIf="currentIndex===2" class="slide dessert">
       <div>
-        <button routerLink="menu">Postres</button>
+        <button (click)="selectDessert()" routerLink="menu">Postres</button>
       </div>
     </div>
   </div>

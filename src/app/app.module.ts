@@ -16,6 +16,7 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 import { ContactComponent } from './views/contact/contact.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
 import { BtnSubmitOrderComponent } from './components/btn-submit-order/btn-submit-order.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { BtnSubmitOrderComponent } from './components/btn-submit-order/btn-submi
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
