@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, SimpleChanges } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +7,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  loginStatus:boolean = false;
+  loginStatus: boolean = false;
 
-  ngOnInit(){
+
+  ngOnInit() {
+    this.checkStatus();
+  }
+
+  checkStatus() {
     this.loginStatus = JSON.parse(localStorage.getItem('loginStatus') || 'false');
   }
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.checkStatus();
+      }
+    });
+  }
+
 }

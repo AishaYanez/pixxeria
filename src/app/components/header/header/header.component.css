@@ -27,6 +27,22 @@ img {
   cursor: pointer;
 }
 
+.pizza-icon{
+  background-color: #DFDFDF;
+  border-radius: 100px;
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-image: url('./../../../../assets/img/pizza-icon.png');
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+
+}
+
 .nav-menu {
   display: none;
 }

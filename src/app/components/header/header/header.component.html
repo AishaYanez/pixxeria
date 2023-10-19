@@ -7,8 +7,8 @@
       <img routerLink="/" src=".\assets\img\logo-header.png">
     </div>
     <div>
-        <img *ngIf="loginStatus" class="account_circle" src=".\assets\img\account_circle.png">
-        <img *ngIf="!loginStatus" class="account_circle" src=".\assets\img\account_circle.png">
+        <img  routerLink="login" *ngIf="!loginStatus" class="account_circle" src=".\assets\img\account_circle.png">
+        <img *ngIf="loginStatus" class="account_circle pizza-icon">
         <div class="nav-menu" *ngIf="loginStatus">
           <app-nav-menu></app-nav-menu>
         </div>

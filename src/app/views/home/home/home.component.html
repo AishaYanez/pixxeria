@@ -1,18 +1,18 @@
 <div class="slider-container" #sliderContaine>
   <div class="slider">
-    <div *ngIf="currentIndex===0" class="slide">
+    <div *ngIf="currentIndex===0" class="slide starter">
       <div>
-        <button></button>
+        <button routerLink="menu">Entrantes</button>
       </div>
     </div>
-    <div *ngIf="currentIndex===1" class="slide">
+    <div *ngIf="currentIndex===1" class="slide main">
       <div>
-        <button></button>
+        <button routerLink="menu">Comidas</button>
       </div>
     </div>
-    <div *ngIf="currentIndex===2" class="slide">
+    <div *ngIf="currentIndex===2" class="slide dessert">
       <div>
-        <button></button>
+        <button routerLink="menu">Postres</button>
       </div>
     </div>
   </div>
