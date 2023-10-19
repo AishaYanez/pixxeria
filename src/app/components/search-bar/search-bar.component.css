@@ -1,7 +1,11 @@
+label {
+  margin: auto 10px;
+}
+
 .search-bar {
   background-color: #DFDFDF;
   border-radius: 100px;
-  width: 40px;
+  min-width: 40px;
   height: 40px;
   display: flex;
   justify-content: center;
@@ -9,17 +13,31 @@
   cursor: pointer;
 }
 
-.search-resourses > input {
-  border: none;
+#search {
   background-color: #DFDFDF;
-  border-bottom: 1px solid black;
-  display: none;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  width: 1px;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  opacity: 0;
 }
 
 .icon-check-container {
   display: none;
+  margin: auto 10px;
 }
 
-.search-bar:focus {
-  width: 25vw;
+#search:focus {
+  width: 8em;
+  opacity: 1;
+}
+
+#search:focus + .icon-check-container {
+  display: block;
 }

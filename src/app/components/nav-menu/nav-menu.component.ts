@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-menu.component.css']
 })
 export class NavMenuComponent {
-
+  logout(){
+    localStorage.setItem('loginStatus','false');
+  }
 }

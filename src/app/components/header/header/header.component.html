@@ -1,15 +1,17 @@
 <header>
-  <div class="nav-container">
+  <div class="container">
     <div id="search-bar-container">
       <app-search-bar></app-search-bar>
     </div>
     <div class="img-container">
-      <img src=".\assets\img\logo-header.png">
+      <img routerLink="/" src=".\assets\img\logo-header.png">
     </div>
     <div>
-      <div class="img-container">
-        <img src=".\assets\img\account_circle.png">
-      </div>
+        <img *ngIf="loginStatus" class="account_circle" src=".\assets\img\account_circle.png">
+        <img *ngIf="!loginStatus" class="account_circle" src=".\assets\img\account_circle.png">
+        <div class="nav-menu" *ngIf="loginStatus">
+          <app-nav-menu></app-nav-menu>
+        </div>
     </div>
   </div>
 </header>

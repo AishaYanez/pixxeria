@@ -1,1 +1,23 @@
-<p>home works!</p>
+<div class="slider-container" #sliderContaine>
+  <div class="slider">
+    <div *ngIf="currentIndex===0" class="slide">
+      <div>
+        <button></button>
+      </div>
+    </div>
+    <div *ngIf="currentIndex===1" class="slide">
+      <div>
+        <button></button>
+      </div>
+    </div>
+    <div *ngIf="currentIndex===2" class="slide">
+      <div>
+        <button></button>
+      </div>
+    </div>
+  </div>
+  <div class="btn-container">
+    <button (click)="prevSlide()">Anterior</button>
+    <button (click)="nextSlide()">Siguiente</button>
+  </div>
+</div>

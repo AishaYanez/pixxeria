@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  loginStatus:boolean = false;
 
+  ngOnInit(){
+    this.loginStatus = JSON.parse(localStorage.getItem('loginStatus') || 'false');
+  }
 }

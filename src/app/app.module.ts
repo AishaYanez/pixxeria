@@ -15,6 +15,7 @@ import { SingupComponent } from './components/singup/singup/singup.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
+import { BtnSubmitOrderComponent } from './components/btn-submit-order/btn-submit-order.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NavMenuComponent } from './components/nav-menu/nav-menu.component';
     SingupComponent,
     SearchBarComponent,
     ContactComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    BtnSubmitOrderComponent
   ],
   imports: [
     FormsModule,

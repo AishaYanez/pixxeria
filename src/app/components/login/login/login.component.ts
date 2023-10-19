@@ -12,7 +12,7 @@ export class LoginComponent {
 
   login(loginForm: NgForm){
     if (loginForm.valid) {
-      console.log('hola');
+      localStorage.setItem('loginStatus', 'true');
     } else {
       alert('Por favor, complete todos los campos requeridos.');
     }
